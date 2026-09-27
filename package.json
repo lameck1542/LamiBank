@@ -1,0 +1,11 @@
+{
+  "devDependencies": {
+    "cordova-android": "^15.1.0",
+    "cordova-sqlite-storage": "^7.0.0"
+  },
+  "cordova": {
+    "plugins": {
+      "cordova-sqlite-storage": {}
+    }
+  }
+}

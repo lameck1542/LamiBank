@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+   <head>
+  <link rel="stylesheet" href="../assets/css/rapports.css">
+        <!--Lien vers les icones fontawesome-free-7-->
+  <link rel="stylesheet"
+href="../assets/fontawesome-free-7.2.0-web/css/all.min.css">
+  <title>rapports</title>
+ <meta charset="UTF-8">
+ <meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+        </head>
+<body>
+<div class="contenu-principale">
+	
+ <div class="header">
+
+ <div class="menu-btn" id="menu-btn">
+   <i class="fa-solid fa-bars" id="menu-btn"></i>
+ </div>
+
+ <div class="title-application">
+   <h3>Rapports</h3>
+   <p>Le details de tous les operations par jour</p>
+</div>
+
+ <div class="notifications">
+   <i class="fa-solid fa-chart-line"></i>
+ </div>
+
+ </div>
+
+<!--options du bouton menu-->
+ <div class="menu-content" id="menu-content">
+
+ <div class="header-menu">
+ <h4>MENU</h4>
+ <button id="close-menu">
+ <i class="fa-solid fa-arrow-right"></i>
+ </button>
+ </div>
+
+ <div class="menu-option">
+   <a href="../menu/mon_profil.html">
+    <i class="fa-solid fa-user"></i>
+    Mon profil
+   </a>
+ </div>
+
+ <div class="menu-option">
+   <a href="../menu/rapports.html">
+   <i class="fa-solid fa-file-invoice"></i>
+    Rapports
+   </a>
+ </div>
+
+ <div class="menu-option">
+  <a href="../menu/parametres.html">
+    <i class="fa-solid fa-gear"></i>
+     Paramètres
+  </a>
+ </div>
+
+ <div class="menu-option">
+   <a href="../menu/a_propos.html">
+    <i class="fa-solid fa-circle-info"></i>
+      À propos
+   </a>
+ </div>
+
+ <div class="menu-option">
+   <a href="../menu/aide.html">
+   <i class="fa-solid fa-question"></i>
+      Aide
+   </a>
+ </div>
+
+ <div class="menu-option">
+  <a href="../menu/quitter.html">
+  <i class="fa-solid fa-right-from-bracket"></i>
+   Quitter
+  </a>
+ </div>
+
+</div>
+
+ <!--le contenu qui defile-->
+  <main class="page-content">
+	
+  <div class="tete-rapports">
+
+    <div class="calendrier" id="jour-actuel">
+
+      <div class="icon-calendar">
+        <i class="fa-solid fa-calendar-days"></i>
+      </div>
+
+      <div class="day-calendar">
+        <p>Rapport du</p>
+        <span id="date-jour"></span>    
+      </div>
+
+      <label id="ouvrir-calendrier">
+        <i class="fa-solid fa-chevron-right"></i>
+      </label>
+
+      <input type="date" id="date-select">
+
+     
+      
+      
+    </div>
+
+    <div class="solde-total">
+
+      <i class="fa-solid fa-sack-dollar"></i>
+      <p>Solde: 
+        <span id="soldeTotal"></span>
+      </p>
+
+    </div>
+	</div>
+
+	<h3>Les opérations du jour:</h3>
+	
+	<div class="day-result">
+		
+	
+		<div class="day-depot" id="showDepot">
+			<i class="fa-solid fa-hand-holding-dollar"></i>
+			<p>Depot:<span id="depotJour"></span> </p>
+		</div>
+		
+		
+		
+		<div class="day-retrait" id="showRetrait">
+			<i class="fa-solid fa-arrow-up-from-bracket"></i>
+			<p>Rétrait:	
+			<span id="retraitJour"></span> 
+			</p>
+		</div>
+	
+		
+	
+		<div class="show-report" id="showMembres">
+			<i class="fa-solid fa-user-plus"></i>
+			<p>
+        Membres:
+        <span id="nombreMembres"></span>
+      </p>
+		</div>
+		
+	</div>
+
+	
+	<h3>Activites d'aujourd'hui:</h3>
+
+  <!--LE TABLEAU QUI CNTIENT L'HISTORIQUE DU DEPOTS PAR JOUR-->
+   <div class="table-container" id="depotTable">
+
+        <table>
+
+            <thead>
+                <th colspan="4"><b>TOUS LES DEPOTS</b></th>
+                <tr>
+                    <th>Opérations</th>
+                    <th>Membre</th>
+                    <th>Montant</th>
+                    <th>Heure</th>
+                </tr>
+            </thead>
+
+            <tbody id="historiqueDepots">          
+                <!-- JavaScript va ajouter les activités ici -->
+            </tbody>
+
+        </table>
+
+    </div>
+
+    <!--LE TABLEAU QUI CNTIENT L'HISTORIQUE DU RETRAIT PAR JOUR-->
+   <div class="table-container" id="retraitTable">
+
+        <table>
+
+            <thead>
+              <th colspan="4"><b>TOUS LES RETRAITS</b></th>
+                <tr>
+                    <th>Opérations</th>
+                    <th>Membre</th>
+                    <th>Montant</th>
+                    <th>Heure</th>
+                </tr>
+            </thead>
+
+            <tbody id="historiqueRetraits">       
+                <!-- JavaScript va ajouter les activités ici -->
+            </tbody>
+
+        </table>
+
+    </div>
+
+
+<!--LE TABLEAU QUI CNTIENT L'HISTORIQUE DES MEMBRES AJOUTEES PAR JOUR-->
+   <div class="table-membre" id="membreTable">
+
+        <table>
+
+            <thead>
+              <th colspan="2">LES MEMBRES</th>
+                <tr>
+                    <th>Membre</th>
+                    <th>Heure</th>
+                </tr>
+            </thead>
+
+            <tbody id="historiqueMembres">
+                <!-- JavaScript va ajouter les activités ici -->
+            </tbody>
+
+        </table>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	<section class="activites-recentes" id="tableGeneral">
+
+    <div class="table-container">
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>Opérations</th>
+                    <th>Membre</th>
+                    <th>Montant</th>
+                    <th>Heure</th>
+                </tr>
+            </thead>
+
+            <tbody id="historiqueActivites">
+                <!-- JavaScript va ajouter les activités ici -->
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+  </main>
+
+
+
+
+ </div>
+
+<script src="../cordova.js"></script>
+<script src="../js/base_de_donnees.js"></script>
+<script src="../js/rapports.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<link rel="stylesheet" href="../assets/css/ajouter.css">
+	<!--Lien vers les icones fontawesome-free-7-->	
+	<link rel="stylesheet"
+href="../assets/fontawesome-free-7.2.0-web/css/all.min.css">
+	<title>ajouter un membres</title>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+	</head>
+<body>
+	<div class="contenu-principale">
+		<div class="header">
+			
+			<div class="return-btn" id="return-btn">
+				<i class="fa-solid fa-arrow-left" id="menu-btn"></i>
+			</div>
+			
+			<div class="title-application">
+				<h3>Ajouter un membre</h3>
+				<p>Completer tous les informations</p>
+			</div>
+			
+			<div class="notifications">
+				<i class="fa-solid fa-building-columns"></i>
+			</div>
+		
+		</div>
+		
+		<main class="page-content">
+
+        <div class="formulaire">
+
+            <form id="form-membre" enctype="multipart/form-data">
+
+                <!-- ton formulaire ici -->
+				
+				<h3>Choisir la photo: </h3>
+				<label for="photo"><i class="fa-solid fa-camera"></i>
+				</label>
+				<input id="photo" type="file" required>
+				
+			<h3>Informations personnel  <i class="fa-solid fa-user"></i></h3>
+			<label>Nom: </label>
+			<input id="nom" type="text" required>
+			
+			<label>Prenom: </label>
+			<input id="prenom" type="text" required>
+			
+			<label>Sexe:</label>
+			<select id="sexe">
+				<option value="masculin">Masculin</option>
+				<option value="feminin">Féminin</option>
+			</select>
+			
+			<label >Date de naissance:</label>
+			<input
+    type="text"
+    id="date_naissance"
+    name="date_naissance"
+    placeholder="JJ/MM/AAAA"
+    inputmode="numeric"
+    maxlength="10"
+    required
+>
+			
+			<label>Lieu de naissance: </label>
+			<input id="lieu-naissance"type="text" required>
+			
+			<h3>Coordonnées <i class="fa-solid fa-location-dot"></i></h3>
+			<label>Numéro du téléphone: </label>
+			<input type="tel" id="telephone" required>
+			
+			<label>Adresse: </label>
+			<input type="text" id="adresse" required>
+			
+		<label>CNI: </label>
+		<input type="text" id="cni" required>
+		
+		<div class="buttons">
+			<button type="reset" id="annuler">
+				Annuler
+			</button>
+			<button type="submit" id="ajouter">
+				Ajouter
+			</button>
+
+		</div>	
+            </form>
+
+        </div>
+        </div>
+
+    </main>
+	
+	</div>
+
+
+<script src="../cordova.js"></script>
+<script src="../js/base_de_donnees.js"></script>
+<script src="../js/ajouter_membre.js"></script>
+</body>
+</html>

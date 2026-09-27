@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<link rel="stylesheet" href="../assets/css/mon_profil.css">
+	<!--Lien vers les icones fontawesome-free-7-->	
+	<link rel="stylesheet"
+href="../assets/fontawesome-free-7.2.0-web/css/all.min.css">
+	<title>mon profil</title>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+	</head>
+<body>
+	<div class="contenu-principale">
+		<div class="header">
+			
+			<div class="return-btn" id="return-btn">
+				<a href="../accueil.html">
+				<i class="fa-solid fa-arrow-left" id="menu-btn"></i>
+				</a>
+			</div>
+			
+			<div class="title-application">
+				<h3>Mon profil</h3>
+				<p>
+					Consulter votre identinté
+				</p>
+			</div>
+			
+			<div class="title-gear">
+				<i class="fa-solid fa-pen"></i>
+			</div>
+		
+		</div>
+		
+		<main class="page-content">
+			
+		<div class="carte-profil">
+			
+			<img src="" alt="photo admin" id="photoAdmin">
+			
+			<div class="identite">
+				<p id="nomAdmin"></p>
+				<p id="prenomAdmin"><noteAdd/p>
+				<p id="telAdmin"></p>
+			</div>
+			
+		</div>
+
+		<div class="note-add" id="ajouterNote">
+			<i class="fa-solid fa-plus-circle"></i>
+			<p>Ajouter une Note</p>
+		</div>
+		
+		<div class="ajouter-notes" id="carteAjouter">
+			<h3>Ecrire un note:</h3>
+			<form id="formulaire">
+				
+				<input type="text" id="title" placeholder="Le title.." required>
+				
+				<textarea id="contenu" placeholder="Ecrire ici..."></textarea>
+				
+			<label for="photo">
+				Photo:
+				<i class="fa-solid fa-camera"></i>
+				</label>
+			<input type="file" id="photo">
+			
+			<button type="submit">Ajouter</button>
+				
+			</form>
+		</div>
+		
+		<div id="listeNotes"></div>
+		
+
+    </main>
+	
+	</div>
+
+
+<script src="../cordova.js"></script>
+<script src="../js/base_de_donnees.js"></script>
+<script src="../js/mon_profil.js"></script>
+</body>
+</html>

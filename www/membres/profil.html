@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<link rel="stylesheet" href="../assets/css/profil.css">
+	<!--Lien vers les icones fontawesome-free-7-->	
+	<link rel="stylesheet"
+href="../assets/fontawesome-free-7.2.0-web/css/all.min.css">
+	<title>profil du membre</title>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+	</head>
+<body>
+	<div class="contenu-principale">
+		<div class="header">
+			
+			<div class="return-btn" id="return-btn">
+				<a href="liste.html">
+				<i class="fa-solid fa-arrow-left" id="menu-btn"></i>
+				</a>
+			</div>
+			
+			<div class="title-application">
+				<h3>Profil du membre</h3>
+				<p>
+					Consulter son identinté actuel
+				</p>
+			</div>
+			
+			<a class="title-gear" id="icone-modifier">
+				<i class="fa-solid fa-pen"></i>
+			</a>
+			
+		</div>
+		
+		<main class="page-content">
+			
+		<div class="carte-profil">
+			
+			<img src="" alt="photo membre" id="photoMembre">
+			
+			<div class="identite">
+				
+				<h3 id="nomMembre"></h3>
+				
+				<p class="info-membre">
+					<i class="fa-solid fa-id-card"></i>
+					<span id="cniMembre"></span>
+				</p>
+				
+				<p class="info-membre">
+					<i class="fa-solid fa-phone"></i>
+					<span id="telMembre"></span>
+				</p>
+				
+				<p class="info-membre">
+					<i class="fa-solid fa-location-dot"></i>
+					<span id="membreAdresse"></span>
+				</p>
+				
+				<p class="info-membre">
+					<i class="fa-solid fa-dollar"></i>
+					<span id="membreSolde"></span>
+				</p>
+			</div>
+			
+		</div>
+		
+		<div class="operations">
+			
+			<!--carte de depot -->
+			<div id="carte-depot">
+				<div class="head-carte">
+				<h3>Déposer au compte</h3>
+				
+				<button id="fermer-carte"><i class="fa-solid fa-x"></i></button>
+				</div>
+				
+				<form id="form-depot">
+					
+					<label>
+						Montant à deposer: 
+					</label>
+					<input type="text" id="montant-depot">
+					
+					<label>
+						Motif du dépot:
+					</label>
+					<input type="text" id="motif-depot">
+					
+					<button type="submit">
+						Déposer
+					</button>
+					
+					
+				</form>
+			</div>
+			
+			<!-- carte de retrait -->
+			<div id="carte-retrait">
+				
+			<div class="head-carte">
+				<h3>Rétirer au compte</h3>
+				
+				<button id="fermer-retrait">
+					<i class="fa-solid fa-x"></i>
+				</button>
+				</div>
+				
+				<form id="form-retrait">
+					
+					<label>
+						Montant à rétirer: 
+					</label>
+					<input type="text" id="montant-retrait">
+					
+					<label>
+						Motif du rétrait:
+					</label>
+					<input type="text" id="motif-retrait">
+					
+					<button type="submit">
+					  Rétirer
+					</button>
+					
+					
+				</form>
+			</div>
+		</div>
+		
+		<div id="operations-profil">
+		<div class="actions-profil" >
+			
+			<div class="actions deposer" id="depot">
+				<i class="fa-solid fa-circle-plus"></i>
+				<p>Déposer</p>
+			</div>
+			
+			<div class="actions retirer" id="retrait">
+				<i class="fa-solid fa-hand-holding-dollar"></i>
+				<p>Rétirer</p>
+			</div>
+			
+			<div class="actions Supprimer" id="supprimer">
+				<i class="fa-solid fa-trash"></i>
+				<p>Supprimer</p>
+			</div>
+			
+		</div>
+		</div>
+		
+	<h3 class="histo">Historique des activités: </h3>
+	
+	<section class="activites-recentes">
+
+    <div class="table-container">
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>Activité</th>
+                    <th>Motif</th>
+                    <th>Montant</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+
+            <tbody id="historiqueActivites">
+                <!-- JavaScript va ajouter les activités ici -->
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+		
+	
+		
+		
+		
+
+    </main>
+	
+	</div>
+
+<script src="../cordova.js"></script>
+<script src="../js/base_de_donnees.js"></script>
+<script src="../js/profil.js"></script>
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+   <head>
+  <link rel="stylesheet" href="../assets/css/operations.css">
+        <!--Lien vers les icones fontawesome-free-7-->
+  <link rel="stylesheet"
+href="../assets/fontawesome-free-7.2.0-web/css/all.min.css">
+  <title>opérations</title>
+ <meta charset="UTF-8">
+ <meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+        </head>
+<body>
+<div class="contenu-principale">
+	
+ <div class="header">
+
+ <div class="menu-btn" id="menu-btn">
+   <i class="fa-solid fa-bars" id="menu-btn"></i>
+ </div>
+
+ <div class="title-application">
+   <h3>Opérations</h3>
+   <p>Tous les opérations à jour</p>
+</div>
+
+ <div class="notifications">
+   <i class="fa-solid fa-landmark"></i>
+ </div>
+
+ </div>
+
+<!--options du bouton menu-->
+ <div class="menu-content" id="menu-content">
+
+ <div class="header-menu">
+ <h4>MENU</h4>
+ <button id="close-menu">
+ <i class="fa-solid fa-arrow-right"></i>
+ </button>
+ </div>
+
+ <div class="menu-option">
+   <a href="../menu/mon_profil.html">
+    <i class="fa-solid fa-user"></i>
+    Mon profil
+   </a>
+ </div>
+
+ <div class="menu-option">
+   <a href="../menu/rapports.html">
+   <i class="fa-solid fa-file-invoice"></i>
+    Rapports
+   </a>
+ </div>
+
+ <div class="menu-option">
+  <a href="../menu/parametres.html">
+    <i class="fa-solid fa-gear"></i>
+     Paramètres
+  </a>
+ </div>
+
+ <div class="menu-option">
+   <a href="../menu/a_propos.html">
+    <i class="fa-solid fa-circle-info"></i>
+      À propos
+   </a>
+ </div>
+
+ <div class="menu-option">
+   <a href="../menu/aide.html">
+   <i class="fa-solid fa-question"></i>
+      Aide
+   </a>
+ </div>
+
+ <div class="menu-option">
+  <a href="../menu/quitter.html">
+  <i class="fa-solid fa-right-from-bracket"></i>
+   Quitter
+  </a>
+ </div>
+
+</div>
+
+ <!--le contenu qui defile-->
+  <main class="page-content">
+	
+	<div class="act-operations">
+		<a href="depot_rapide.html">
+		<div class="act-depot">
+				<i class="fa-solid fa-hand-holding-dollar"></i>
+				<p>Déposer au compte</p>
+			</div>
+                 </a>
+
+ 
+                 <a href="retrait_rapide.html">			
+			<div class="act-retrait">
+				<i class="fa-solid fa-money-bill-transfer"></i>
+				<p>Retirer au compte</p>
+			</div>
+                 </a>
+			
+	</div>
+	
+	<h3>Les opérations du jour:</h3>
+	
+	<div class="day-result">
+		
+		<a href="">
+		<div class="day-depot">
+			<i class="fa-solid fa-sack-dollar"></i>
+			<p>Dépot:	<span id="depotJour"></span> </p>
+		</div>
+		</a>
+		
+		<a href="">
+		<div class="day-retrait">
+			<i class="fa-solid fa-arrow-up-from-bracket"></i>
+			<p>Rétrait:	
+			<span id="retraitJour"></span> 
+			</p>
+		</div>
+		</a>
+		
+		<a href="">
+		<div class="show-report">
+			<i class="fa-solid fa-file-lines"></i>
+			<p>Voir rapports <i class="fa-solid fa-chevron-right"></i></p>
+		</div>
+		</a>
+		
+	</div>
+	
+	<h3>Opérations récentes:</h3>
+	
+	<section class="activites-recentes">
+
+    <div class="table-container">
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>Opérations</th>
+                    <th>Membre</th>
+                    <th>Montant</th>
+                    <th>Heure</th>
+                </tr>
+            </thead>
+
+            <tbody id="historiqueActivites">
+                <!-- JavaScript va ajouter les activités ici -->
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+
+  </main>
+
+<!--Barre fixé en bas-->
+
+
+
+<div class="footer">
+
+ <a href="javascript:location.replace('../accueil.html')">
+ <div class="footer-option">
+ <i class="fa-solid fa-home"></i>
+  <p>Accueil</p>
+</div>
+ </a>
+
+ <a href="javascript:location.replace('../membres/liste.html')">
+ <div class="footer-option">
+ <i class="fa-solid fa-user-group"></i>
+ <p>Membres</p>
+ </div>
+</a>
+
+ <a href="javascript:location.replace('operations.html')">
+ <div class="footer-option">
+ <i class="fa-solid fa-wallet"></i>
+  <p>Opérations</p>
+ </div>
+ </a>
+
+ <a href="javascript:location.replace('historique.html')">
+ <div class="footer-option">
+ <i class="fa-solid fa-clock-rotate-left"></i>
+  <p>Historique</p>
+ </div>
+ </a>
+ </div>
+ </div>
+<script src="../cordova.js"></script>
+<script src="../js/base_de_donnees.js"></script>
+<script src="../js/operations.js"></script>
+
+</body>
+</html>

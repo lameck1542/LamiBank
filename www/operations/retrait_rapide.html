@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<link rel="stylesheet" href="../assets/css/retrait_rapide.css">
+	<!--Lien vers les icones fontawesome-free-7-->	
+	<link rel="stylesheet"
+href="../assets/fontawesome-free-7.2.0-web/css/all.min.css">
+	<title>mon profil</title>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+	</head>
+<body>
+	<div class="contenu-principale">
+		<div class="header">
+			
+			<div class="return-btn" id="return-btn">
+				<a href="#" id="retour">
+				<i class="fa-solid fa-arrow-left" id="menu-btn"></i>
+				</a>
+			</div>
+			
+			<div class="title-application">
+				<h3>Rétirer au compte</h3>
+			</div>
+		
+		</div>
+		
+		<main class="page-content">
+			
+			<div class="champ">
+				<h4>Entrez le numero de compte</h4>
+				<form id="numero-compte">
+						
+						<input type="text" id="acount" placeholder="le numero de compte..." required>
+						
+					<button type="submit" id="chercher">
+						Chercher
+					</button>
+					
+				</form>
+				
+			</div>
+			
+			<p id="error"></p>
+			
+			<div class="tout-action" id="tout-action">
+			
+			<div class="search-result">
+				
+				<img src="" alt="membre-photo" id="membrePhoto">
+				
+				<div class="membre-identite">
+					<h4>
+						<span id="membreNom"></span>
+					</h4>
+					
+					<p>Compte: 
+					<span id="membreCompte"></span>
+					</p>
+					
+					<p>cni: 
+					<span id="membreCni"></span>
+					</p>
+					
+					<p>Solde: 
+					<span id="membreSolde"></span>
+					</p>
+					
+				</div>
+			</div>
+			
+			<form id="retirer-montant">
+				
+				<label>
+					Le montant à rétirer: 
+				</label>
+				<input type="text" id="montant" placeholder="montant...">
+				
+				<label>
+					Motif: 
+				</label>
+				<input type="text" id="motif" required>
+				
+				<button type="submit" id="ajouter">
+					Retirer
+				</button>
+				
+			</form>
+			</div>
+		
+
+    </main>
+	
+	</div>
+
+
+<script src="../cordova.js"></script>
+<script src="../js/base_de_donnees.js"></script>
+<script src="../js/retrait_rapide.js"></script>
+</body>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<link rel="stylesheet" href="assets/css/accueil.css">
+	<!--Lien vers les icones fontawesome-free-7-->	
+	<link rel="stylesheet"
+href="assets/fontawesome-free-7.2.0-web/css/all.min.css">
+	<title>dashboard gestionnaire</title>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+	</head>
+<body>
+	<div class="contenu-principale">
+		<div class="header">
+			
+			<div class="menu-btn" id="menu-btn">
+				<i class="fa-solid fa-bars"></i>
+			</div>
+			
+			<div class="title-application">
+				<h3>LamiBank <i class="fa-solid fa-building-columns"></i></h3>
+				<p>Gestion du compte</p>
+			</div>
+			
+			<div class="notifications">
+				<i class="fa-solid fa-bell"></i>
+			</div>
+		
+		</div>
+		
+
+		<!--options du bouton menu-->
+		<div class="menu-content" id="menu-content">
+			
+			<div class="header-menu">
+				<h4>MENU</h4> 
+				<button id="close-menu">
+					<i class="fa-solid fa-arrow-right"></i>
+				</button>
+			</div>
+			
+			<div class="menu-option">
+				<a href="menu/mon_profil.html">
+					<i class="fa-solid fa-user"></i>
+					Mon profil
+				</a>
+			</div>
+			
+			<div class="menu-option">
+				<a href="menu/rapports.html">
+					<i class="fa-solid fa-file-invoice"></i>
+					Rapports
+				</a>
+			</div>
+			
+			<div class="menu-option">
+				<a href="menu/parametres.html">
+					<i class="fa-solid fa-gear"></i>
+					Paramètres
+				</a>
+			</div>
+		
+		<div class="menu-option">
+				<a href="menu/a_propos.html">
+					<i class="fa-solid fa-circle-info"></i>
+					À propos
+				</a>
+			</div>
+			
+			<div class="menu-option">
+				<a href="menu/aide.html">
+					<i class="fa-solid fa-question"></i>
+					Aide
+				</a>
+			</div>
+			
+			<div class="menu-option">
+				<a href="">
+					<i class="fa-solid fa-right-from-bracket"></i>
+					Quitter
+				</a>
+			</div>
+			
+		</div>
+
+
+		<!--contenu qui defile-->
+		<main class="page-content">
+		
+		<!--actions en tete-->
+		<div class="entete">
+
+    <div class="profil-accueil">
+
+        <img id="photoUtilisateur" src="" alt="Photo utilisateur">
+
+        <div class="infos-utilisateur">
+            <p id="nomUtilisateur"></p>
+            <p id="prenomUtilisateur"></p>
+        </div>
+
+    </div>
+
+    
+<div class="calendar">
+    <i class="fa-solid fa-calendar-days"></i>
+    <span id="dateJour"></span>
+</div>
+
+
+</div>		<!--actions rapide-->
+		<h3 class="rpd-titre">Actions rapide</h3>
+		<div class="actions-rapide">
+			
+
+		 <a href="operations/depot_rapide.html">
+
+                	<div class="actions-option depot">
+				<i class="fa-solid fa-hand-holding-dollar"></i>
+				<p>Dépot</p>
+			</div>
+                 </a>
+
+
+		<a href="operations/retrait_rapide.html">	
+			<div class="actions-option retrait">
+				<i class="fa-solid fa-vault"></i>
+				<p>Retrait</p>
+			</div>
+                </a>
+
+
+	     	<a href="membres/ajouter.html">
+			<div class="actions-option ajouter">
+				<i class="fa-solid fa-user-plus"></i>
+				 <p>Ajouter membre</p>
+			</div>
+
+			</a>
+		</div>
+		
+		<h3>Activités récentes:</h3>
+		
+			<div class="search">
+			<form id="rechercher">
+				
+			<input type="text" placeholder="rechercher...">
+			<button type="submit"><i class="fa-solid fa-search"></i>Chercher</button>
+			</form>
+			
+		</div>
+                 
+               <section class="activites-recentes">
+
+    <div class="table-container">
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>Activité</th>
+                    <th>Membre</th>
+                    <th>Montant</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+
+            <tbody id="historiqueActivites">
+                <!-- JavaScript va ajouter les activités ici -->
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>		
+		
+		
+		
+		</main>
+		
+		
+		<!--Barre fixé en bas-->
+		
+                    <div class="footer">
+			
+			<a href="javascript:location.replace('accueil.html')" class="onglet active">
+				<div class="footer-option">
+				<i class="fa-solid fa-home"></i>
+				<p>Accueil</p>
+			</div>
+			</a>
+			
+			<a href="javascript:location.replace('membres/liste.html')">
+				<div class="footer-option">
+				<i class="fa-solid fa-user-group"></i>
+				<p>Membres</p>
+			</div>
+			</a>
+			
+			<a href="javascript:location.replace('operations/operations.html')">
+				<div class="footer-option">
+				   <i class="fa-solid fa-wallet"></i>
+				<p>Opérations</p>
+			</div>
+			</a>
+			
+			<a href="javascript:location.replace('operations/historique.html')">
+				<div class="footer-option">
+				<i class="fa-solid fa-clock-rotate-left"></i>
+				<p>Historique</p>
+			</div>
+			</a>
+		</div>
+
+
+
+	</div>
+
+
+<script src="cordova.js"></script>
+<script src="js/base_de_donnees.js"></script>
+<script src="js/accueil.js"></script>
+</body>
+</html>

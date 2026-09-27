@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<link rel="stylesheet" href="../assets/css/liste.css">
+	<!--Lien vers les icones fontawesome-free-7-->	
+	<link rel="stylesheet"
+href="../assets/fontawesome-free-7.2.0-web/css/all.min.css">
+	<title>membres</title>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+	</head>
+<body>
+	<div class="contenu-principale">
+		<div class="header">
+			
+			<div class="menu-btn" id="menu-btn">
+				<i class="fa-solid fa-bars" id="menu-btn"></i>
+			</div>
+			
+			<div class="title-application">
+				<h3>LamiBank <i class="fa-solid fa-building-columns"></i></h3>
+				<p>Liste des membres</p>
+			</div>
+			
+			<div class="notifications">
+				<i class="fa-solid fa-bell"></i>
+			</div>
+		
+		</div>
+		
+		<!--options du bouton menu-->
+		<div class="menu-content" id="menu-content">
+			
+			<div class="header-menu">
+				<h4>MENU</h4> 
+				<button id="close-menu">
+					<i class="fa-solid fa-arrow-right"></i>
+				</button>
+			</div>
+			
+			<div class="menu-option">
+				<a href="../menu/mon_profil.html">
+					<i class="fa-solid fa-user"></i>
+					Mon profil
+				</a>
+			</div>
+			
+			<div class="menu-option">
+				<a href="../menu/rapports.html">
+					<i class="fa-solid fa-file-invoice"></i>
+					Rapports
+				</a>
+			</div>
+			
+			<div class="menu-option">
+				<a href="../menu/parametres.html">
+					<i class="fa-solid fa-gear"></i>
+					Paramètres
+				</a>
+			</div>
+		
+		<div class="menu-option">
+				<a href="../menu/a_propos.html">
+					<i class="fa-solid fa-circle-info"></i>
+					À propos
+				</a>
+			</div>
+			
+			<div class="menu-option">
+				<a href="../menu/aide.html">
+					<i class="fa-solid fa-question"></i>
+					Aide
+				</a>
+			</div>
+			
+			<div class="menu-option">
+				<a href="../menu/quitter.html">
+					<i class="fa-solid fa-right-from-bracket"></i>
+					Quitter
+				</a>
+			</div>
+			
+		</div>
+		
+
+		<!--le contenu qui defile-->
+		
+
+
+		<main class="page-content">
+
+    <div class="search">
+
+        <form id="rechercher">
+
+            <input
+                type="text"
+                id="recherche-membre"
+                placeholder="Rechercher..."
+            >
+
+            <button type="submit">
+                <i class="fa-solid fa-search"></i>
+                Chercher
+            </button>
+
+        </form>
+
+    </div>
+
+
+    <!-- Liste des membres -->
+
+    <div id="chargement">
+    Chargement...
+</div>
+
+    <div id="liste-membres">
+
+    </div>
+
+
+    <!-- Message lorsqu'il n'y a aucun membre -->
+
+
+
+</main>
+
+<!--Barre fixé en bas-->
+		
+
+
+<div class="footer">
+			
+			<a href="javascript:location.replace('../accueil.html')">
+				<div class="footer-option">
+				<i class="fa-solid fa-home"></i>
+				<p>Accueil</p>
+			</div>
+			</a>
+			
+			<a href="javascript:location.replace('liste.html')">
+				<div class="footer-option">
+				<i class="fa-solid fa-user-group"></i>
+				<p>Membres</p>
+			</div>
+			</a>
+			
+			<a href="javascript:location.replace('../operations/operations.html')">
+				<div class="footer-option">
+				   <i class="fa-solid fa-wallet"></i>
+				<p>Opérations</p>
+			</div>
+			</a>
+			
+			<a href="javascript:location.replace('../operations/historique.html')">
+				<div class="footer-option">
+				<i class="fa-solid fa-clock-rotate-left"></i>
+				<p>Historique</p>
+			</div>
+			</a>
+		</div>
+	</div>
+<script src="../cordova.js"></script>
+<script src="../js/base_de_donnees.js"></script>
+<script src="../js/liste.js"></script>
+
+</body>
+</html>

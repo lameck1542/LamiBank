@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<link rel="stylesheet" href="../assets/css/modifier_profil.css">
+	<!--Lien vers les icones fontawesome-free-7-->	
+	<link rel="stylesheet"
+href="../assets/fontawesome-free-7.2.0-web/css/all.min.css">
+	<title>profil du membre</title>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+	</head>
+<body>
+	<div class="contenu-principale">
+		
+		<div class="header">
+			
+			<div class="return-btn" id="return-btn">
+				<a href="liste.html">
+				<i class="fa-solid fa-chevron-left" id="menu-btn"></i>
+				</a>
+			</div>
+			
+			<div class="title-application">
+				<h3>Modifier le profil</h3>
+				<p>
+					Changer son identinté
+				</p>
+			</div>
+		
+		</div>
+		
+		<main class="page-content">
+			
+			<div class="modifier" id="modifier">
+			
+			<form id="form-modifier">
+				<label>Nom: </label>
+				<input type="text" id="nom" required>
+				
+				<label>Prénom: </label>
+				<input type="text" id="prenom" required>
+				
+				<label>Sexe: </label>
+				<select id="sexe">
+					<option value="masculin">
+						Masculin
+					</option>
+					<option value="feminin">
+						Féminin
+					</option>
+				</select>
+				
+				<label>CNI: </label>
+				<input type="text" id="cni" required>
+				
+				<label>Adresse: </label>
+				<input type="text" id="adresse" required>
+				
+				<label>Téléphone: </label>
+				<input type="tel" id="telephone" required>
+				
+				<label for="photo">
+					Photo: 
+					<i class="fa-solid fa-camera"></i>
+				</label>
+				<input type="file" id="photo">
+				
+				<button type="submit">
+					Modifier
+				</button>
+				
+			</form>
+		 
+		</div>
+
+    </main>
+	
+	</div>
+
+<script src="../cordova.js"></script>
+<script src="../js/base_de_donnees.js"></script>
+<script src="../js/modifier_profil.js"></script>
+</body>
+</html>

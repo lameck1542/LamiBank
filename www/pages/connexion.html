@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>KaziBank - Connexion</title>
+
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/connexion.css">
+</head>
+<body>
+<div class="page-connexion">
+ <section class="connexion-card">
+	
+  <div class="logo">
+  <div class="logo-icon">LB</div>
+    <h1>LamiBank</h1>
+  </div>
+
+  <p class="bienvenue"> Bienvenue </p>
+  <p class="instruction">
+	Connectez-vous pour accéder à votre espace
+  </p>
+
+  <form id="formulaireConnexion">
+   <div class="champ">
+   <label for="motDePasse">
+   Mot de passe
+   </label>
+
+<div class="champ-mot-de-passe">
+<input type="password" id="motDePasse"
+placeholder="Entrez votre mot de passe"
+required>
+
+<button type="button"
+ id="afficherMotDePasse"
+class="bouton-oeil">
+👁
+</button>
+</div>
+</div>
+
+                <p id="messageErreur" class="message-erreur"></p>
+
+                <button
+                    type="submit"
+                    class="bouton-connexion"
+                >
+                    Se connecter
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <script src="../js/connexion.js"></script>
+
+</body>
+</html>
